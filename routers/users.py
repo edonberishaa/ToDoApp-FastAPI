@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException, Path
-from ..models import Users
-from ..database import engine, SessionLocal
+from models import Users
+from database import engine, SessionLocal
 from typing import Annotated
 from sqlalchemy.orm import Session
 from starlette import status
 from pydantic import BaseModel, Field
-from .auth import get_current_user
+from auth import get_current_user
 from passlib.context import CryptContext
 
 
